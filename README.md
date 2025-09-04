@@ -1,52 +1,53 @@
 # classes-objects_in_C-
-# Implement-classes-and-objects-in-cpp
-## AIM
-Practice creating a user-defined class in C++ and computing the volume of a cube, comparing member functions defined inside and outside the class and demonstrating the role of access specifiers.
+# Classes-and-Objects-in-C-plus-plus
 
-Software used: MinGW compiler, Visual Studio Code, online C++ compiler.
+## Aim:
 
-## Program 1 User input inside class (userdefinedclass.cpp)
-Explanation and theory: This program declares a class named cube with three integer members for dimensions. It includes a function to take input for height, width, and length, a function to calculate volume by multiplying the three dimensions, and a display function to show the result. The approach groups data and related operations within the class to keep logic cohesive.
+To study and implement Classes and Objects in C++.
 
-Algorithm:
-- Start.
-- Define class cube with int height, width, length.
-- Implement inp() to read values from standard input.
-- Implement volume() to compute height × width × length.
-- Implement display() to obtain volume and print it.
-- In main(): create an object, call inp(), then display().
-- End.
+## Theory:
 
-## Program 2 Calculate inside class (calcinsideclass.cpp)
-Explanation and theory: The class cube initializes the three dimensions with default values and defines a volume() method inside the class to compute the product of the dimensions. In main, an object is created, volume() is called, and the result is printed, illustrating direct access to members from a method defined within the class.
+C++ is an object oriented programming language that allows the use of classes and objects to model real world entities.
 
-Algorithm:
-- Start.
-- Define class cube with public height, width, length initialized to constants.
-- Define volume() inside the class to return height × width × length.
-- In main(): create cube instance, call volume(), print “Volume : <value>”.
-- End.
+A **class** is a user-defined data type that acts as a blueprint for creating objects. It groups data members(variables) and member functions (methods) into a single unit.
 
-## Program 3 Compute outside class (calcoutsideclass.cpp)
-Explanation and theory: This example defines a cube class with public dimensions, then calculates the volume directly in main using the object’s fields without a member function. It shows that when members are public, client code can read them to compute derived values, though using a method often improves encapsulation.
+An **object** is an instance of a class. Each object has it's own copy of the data members defined in the class, but all objects can use the same member functions. Objects allow interaction with the class's data through well defined interfaces(methods).
 
-Algorithm:
-- Start.
-- Define class cube with public height, width, length initialized to values.
-- In main(): instantiate cube.
-- Compute vol as height × width × length using the object’s fields.
-- Print the computed volume.
-- End.
+## Key Concepts:
 
-## Program 4 Access specifiers and volume (accessspecifier.cpp)
-Explanation and theory: The cube class keeps height, width, and length as private members and exposes a public volume() function to return their product. In main, an object calls volume() to get and print the result. This demonstrates data hiding and controlled access to internal state through a public interface.
+**1. Encapsulation**:
+Encapsulation is the process of binding data and functions into a single unit (i.e., class). It hides the internal details of the object and only exposes necessary information through public functions.
 
-Algorithm:
-- Start.
-- Define class cube with private height, width, length.
-- Provide public volume() that returns height × width × length.
-- In main(): create an object, call volume(), print “Volume : <value>”.
-- End.
+**2. Abstraction**:
+Abstraction means showing only essential features and hiding the complex implementation. In C++, this is achieved through classes and access specifiers.
 
-## Conclusion
-The key class concepts: acquiring input through member functions, computing properties either within the class or externally, and using access specifiers to restrict direct data access. Defining methods inside the class enables straightforward member access, while private data with public functions enforces encapsulation and cleaner interfaces.
+**3. Accessing Members**:
+Objects access the class’s public members using the dot (.) operator. For example:
+objectName.memberFunction();
+
+**4. Multiple Objects**:
+A class can be used to create multiple objects. Each object has its own separate copy of data members but shares the same functions.
+
+**5. Memory Allocation**:
+Memory for data members is allocated when an object is created. Functions do not consume memory for each object—they are shared.
+
+**6. Constructors and Destructors**:
+
+- Constructor: Automatically invoked when an object is created. Used for initialization.
+
+- Destructor: Automatically invoked when an object is destroyed. Used to release resources.
+
+**7. Object Lifetime**:
+The lifetime of an object depends on where and how it is declared:
+
+- Local objects exist until the function ends.
+
+- Global or static objects exist throughout the program.
+
+**8. Access Specifiers**:
+
+- Private: Members are accessible only within the class.
+
+- Public: Members are accessible from outside the class using objects.
+
+- Protected: Used mainly in inheritance scenarios.
